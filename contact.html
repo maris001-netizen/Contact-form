@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="styles.css" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            document.querySelector("form").addEventListener("submit",function(event){
+                event.preventDefault();
+                alert("form was submitted successfully!");
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+      <h1>Contact Us</h1>
+      <div class="name-fields">
+        <div>
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+        </div>
+        <div>
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+        </div>
+      </div>
+      <div>
+         <p>Email Address</p>
+         <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <div>
+        <p>Query Type</p>
+        <div class="query-type-fields">
+          <div class="query-type-box">
+            <label>
+              <input type="radio" name="querytype" value="general" checked>
+              General Enquiry
+            </label>
+          </div>
+          <div class="query-type-box">
+            <label>
+              <input type="radio" name="querytype" value="support">
+              Support Request
+            </label>
+          </div>
+        </div>
+      </div>
+      <p>Message</p>
+      <textarea name="message" required></textarea>
+      <div>
+        <label>
+          <input type="checkbox" name="consent" required>
+          I consent to being contacted by the team
+        </label>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+</body>
+</html>
